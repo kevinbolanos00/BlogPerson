@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+
+<div class='bg-gray-800 text-white p-3 md:px-10 lg:px-20 xl:px-40 2xl:px-72'>
+    <div class='m-6'>
+        <p style="font-family: Poppins-Bold" class='text-4xl font-extrabold py-5 text-center md:text-start'>Acerca de mi</p>
+        {% comment %} <p class='text-2xl font-bold grid place-items-center mb-8'>Acerca de mi</p> {% endcomment %}
+        <p class='text-justify'>
+            &#128075; Hola,<br><br>
+
+            Saludos, soy Kevin Alexander Bolaños, tengo 22 años y actualmente me encuentro en el noveno semestre de mi carrera de Ingeniería de Sistemas. Durante mi trayectoria académica, he desarrollado un profundo interés en el mundo de la programación, y he adquirido experiencia en diversos lenguajes y tecnologías, incluyendo Python, SQL, Java, Spring Boot y Docker.<br><br>
+            
+            Además de mi pasión por la programación, estoy altamente motivado por seguir aprendiendo y creciendo en este campo en constante evolución. He tenido la oportunidad de aplicar mis habilidades en proyectos académicos significativos, como un punto de venta, un sistema de gestión de empleados y una biblioteca digital. Estas experiencias me han permitido fortalecer mis capacidades de trabajo en equipo, adaptación a desafíos técnicos y resolución de problemas.<br><br>
+            
+            Mi compromiso es continuar perfeccionando mis habilidades y conocimientos para asi contribuir de manera significativa en el campo tecnológico.<br><br>
+            
+            
+            {% comment %} I'm Kevin. I am passionate about developing things for the internet.  {% endcomment %}
+        </p>
+        
+        <div class='my-10'>
+            <p style="font-family: Poppins-Bold" class='text-4xl font-extrabold py-5 text-center md:text-start'>Mis Habilidades</p>
+            {% comment %} <p class='text-2xl font-bold grid place-items-center mb-8'>Mis Habilidades</p> {% endcomment %}
+            <div class='grid grid-cols-1 md:grid-cols-2 md:space-x-4 lg:space-x-10'>
+                <div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">HTML</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="html bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Javascript</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="js bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">SQL</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="sql bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Bpring Boot</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="sb bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">CSS</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="css bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="progress-bar text-base font-medium my-3">Python</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="py bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="progress-bar text-base font-medium my-3">Java</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="java bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <style>
+        
+        .progress-bar {
+            animation: progress-bar-animation 1s normal forwards;
+        }
+        @keyframes progress-bar-animation {
+            0%   {  width: 0%; }
+            100% {  width: 100%; }
+        }
+        .html {
+            animation: html-animation 3s normal forwards;
+        }
+        @keyframes html-animation {
+            0%   {  width: 0%; }
+            100% {  width: 50%; }
+        }
+        .css {
+            animation: css-animation 3s normal forwards
+        }
+        @keyframes css-animation {
+            0%   {  width: 0%; }
+            100% {  width: 40%; }
+        }
+        .js {
+            animation: js-animation 3s normal forwards
+        }
+        @keyframes js-animation {
+            0%   {  width: 0%; }
+            100% {  width: 40%; }
+        }
+        .py {
+            animation: py-animation 3s normal forwards
+        }
+        @keyframes py-animation {
+            0%   {  width: 0%; }
+            100% {  width: 55%; }
+        }
+        .java {
+            animation: java-animation 3s normal forwards
+        }
+        @keyframes java-animation {
+            0%   {  width: 0%; }
+            100% {  width: 60%; }
+        }
+        .sql {
+            animation: sql-animation 3s normal forwards
+        }
+        @keyframes sql-animation {
+            0%   {  width: 0%; }
+            100% {  width: 55%; }
+        }
+        .sb {
+            animation: sb-animation 3s normal forwards
+        }
+        @keyframes sb-animation {
+            0%   {  width: 0%; }
+            100% {  width: 45%; }
+        }
+    </style>
+
+    {% comment %} <script>
+        let html_progress = 0;
+        let html_invervalSpeed = 10;
+        let html_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+            let html_bar = document.querySelector('.html');
+            html_progressInterval = setInterval(function(){
+            html_progress += html_incrementSpeed;
+            html_bar.style.width = html_progress + "%";
+            if(html_progress >= 95){
+                clearInterval(html_progressInterval);
+            }
+        }, html_invervalSpeed);
+    });
+
+        let css_progress = 0;
+        let css_invervalSpeed = 10;
+        let css_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+            let css_bar = document.querySelector('.css');
+            css_progressInterval = setInterval(function(){
+            css_progress += css_incrementSpeed;
+            css_bar.style.width = css_progress + "%";
+            if(css_progress >= 80){
+                clearInterval(css_progressInterval);
+            }
+        }, css_invervalSpeed);
+    });
+
+        let js_progress = 0;
+        let js_invervalSpeed = 10;
+        let js_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+            let js_bar = document.querySelector('.js');
+            js_progressInterval = setInterval(function(){
+            js_progress += js_incrementSpeed;
+            js_bar.style.width = js_progress + "%";
+            if(js_progress >= 60){
+                clearInterval(js_progressInterval);
+            }
+        }, js_invervalSpeed);
+    });
+
+    let py_progress = 0;
+    let py_invervalSpeed = 10;
+    let py_incrementSpeed = 1;
+    document.addEventListener("DOMContentLoaded", function(){
+        let py_bar = document.querySelector('.py');
+        py_progressInterval = setInterval(function(){
+        py_progress += py_incrementSpeed;
+        py_bar.style.width = py_progress + "%";
+        if(py_progress >= 80){
+            clearInterval(py_progressInterval);
+        }
+    }, py_invervalSpeed);
+});
+
+let java_progress = 0;
+    let java_invervalSpeed = 10;
+    let java_incrementSpeed = 1;
+    document.addEventListener("DOMContentLoaded", function(){
+        let py_bar = document.querySelector('.java');
+        java_progressInterval = setInterval(function(){
+        java_progress += java_incrementSpeed;
+        java_bar.style.width = java_progress + "%";
+        if(java_progress >= 80){
+            clearInterval(java_progressInterval);
+        }
+    }, java_invervalSpeed);
+});
+
+    let sql_progress = 0;
+    let sql_invervalSpeed = 10;
+    let sql_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+        let sql_bar = document.querySelector('.sql');
+        sql_progressInterval = setInterval(function(){
+        sql_progress += sql_incrementSpeed;
+        sql_bar.style.width = sql_progress + "%";
+        if(sql_progress >= 85){
+            clearInterval(sql_progressInterval);
+        }
+    }, sql_invervalSpeed);
+});
+    let sb_progress = 0;
+    let sb_invervalSpeed = 10;
+    let sb_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+        let sb_bar = document.querySelector('.sb');
+        sb_progressInterval = setInterval(function(){
+        sb_progress += sql_incrementSpeed;
+        sb_bar.style.width = sb_progress + "%";
+        if(sb_progress >= 85){
+            clearInterval(sb_progressInterval);
+        }
+    }, sb_invervalSpeed);
+});
+
+    </script> {% endcomment %}
+</div>
+
+{% endblock %}

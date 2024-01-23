@@ -31,13 +31,17 @@
             </div>
         </div>
         {% comment %} <span class='text-sm text-center pt-2 pb-2 p-6'>I am a UI/UX designer, graphic designer, and web developer, with a passion for crafting visually appealing and user-friendly digital experiences. With my unique combination of skills, I strive to create digital products that are both beautiful and easy to use.</span>{% endcomment %}
+        
+
+
         <div class='hero-btn my-3 md:mt-2 font-bold text-sm md:text-[16px] md:leading-6'>
             <ul class='flex flex-row gap-4 md:space-x-2'>
-                <a href='static/downloads/hvkevin.pdf' target='_blank'>
+                {% if ultima_hoja_de_vida %}
+                <a href="{{ ultima_hoja_de_vida.archivo_pdf.url }}" target='_blank'>
                     <div class='relative group'>
                         <div class='bg-gradient-to-r from-cyan-300 to-blue-600 px-6 py-2 text-white rounded-md -inset-0.5 absolute blur-sm opacity-75 group-hover:-inset-1 transition group-hover:duration-400 group-hover:opacity-90 duration-1000'></div>
                         <button class='relative bg-gray-800 px-7 py-2 text-white rounded-md group-hover:text-gray-50 transition duration-200'>
-                            <i class="bi bi-download font-extrabold"></i> Abrir HV
+                            <i class="bi bi-download font-extrabold"></i> Abrir HV2
                             
                             <!--<i class="fa-thin fa-arrow-right-to-arc font-extrabold"></i> Abrir HV-->
                             
@@ -46,6 +50,9 @@
                         </button>
                     </div>
                 </a>
+                {% else %}
+                <p>No hay hojas de vida disponibles.</p>
+                {% endif %}
                 <a href='/about'><div class='relative group'>
                     <div class='bg-gradient-to-r from-cyan-300 to-blue-600 px-6 py-2 text-white rounded-md -inset-0.5 absolute blur-sm opacity-75 group-hover:-inset-1 transition group-hover:duration-400 group-hover:opacity-90 duration-1000'></div>
                     <button class='relative bg-gray-800 px-7 py-2 text-white rounded-md group-hover:text-gray-50 transition duration-200'><i class="bi bi-person"></i> Acerca de mi</button>
@@ -54,6 +61,10 @@
                 <a class='dl-cv bg-blue-600 p-2 px-4 rounded-[6px] hover:bg-gray-800 hover:outline hover:outline-blue-600 transition delay-75 ease-in-out' href=''><i class="bi bi-chat-square font-extrabold"></i> Contact</a> {% endcomment %}
             </ul>
         </div>
+
+
+
+
         {% comment %} <div class='hero-socials text-xl bg-slate-600 rounded-full p-1 px-28'>
             <ul class='flex flex-row gap-2'>
                 <li><a href='/' class='hover:text-blue-100'><i class="bi bi-youtube"></i></a></li>

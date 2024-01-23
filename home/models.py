@@ -1,4 +1,6 @@
+from datetime import timezone
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Blog(models.Model):
@@ -14,3 +16,14 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+class HojaDeVida(models.Model):
+    titulo = models.CharField(max_length=255)
+    archivo_pdf = models.FileField(upload_to='hojas_de_vida/', default='hoja_de_vida.pdf')
+    fecha_subida = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.titulo
+    
+

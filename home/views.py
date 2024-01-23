@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, redirect, get_object_or_404
 from django.http import Http404
 from home.models import Blog
+from .models import HojaDeVida
 from django.contrib import messages
 from django.core.paginator import Paginator
 from django.core.mail import send_mail
@@ -9,10 +10,20 @@ import random
 import re
 
 # Create your views here.
-def index (request):
+
+
+def index(request):
     blogs = Blog.objects.all()
     random_blogs = random.sample(list(blogs), 3)
-    context = {'random_blogs': random_blogs}
+
+    # Obtener la hoja de vida más reciente
+    ultima_hoja_de_vida = HojaDeVida.objects.order_by('-id').first()
+
+    context = {
+        'random_blogs': random_blogs,
+        'ultima_hoja_de_vida': ultima_hoja_de_vida,
+    }
+
     return render(request, 'index.html', context)
 
 def about (request):
